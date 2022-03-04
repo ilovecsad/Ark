@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Driver Files">
+      <UniqueIdentifier>{8E41214B-6785-4CFE-B992-037D68949A14}</UniqueIdentifier>
+      <Extensions>inf;inv;inx;mof;mc;</Extensions>
+    </Filter>
+    <Filter Include="Function">
+      <UniqueIdentifier>{d3edcc6f-072d-48e3-a166-df57df3457d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Function\driver">
+      <UniqueIdentifier>{ad88fc9e-1baa-44f6-b914-0c916d9feb28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Function\PEB">
+      <UniqueIdentifier>{189fa7c1-2db1-4acd-a62b-748d95a13dbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Function\通信">
+      <UniqueIdentifier>{b70ae2ef-a5a8-4a6f-b930-bc86034c2f0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Function\常用函数">
+      <UniqueIdentifier>{ce44324e-b05d-4258-877e-1d7ac93e7fe0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Function\process">
+      <UniqueIdentifier>{376afcf1-f8d0-4d05-89f4-ced712b52ea2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Function\vad">
+      <UniqueIdentifier>{e1a3e32c-32bb-480f-802a-a0a17c491f3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Function\Memory">
+      <UniqueIdentifier>{e7c55068-2ccf-451d-a354-1f9bad3913bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Function\Thread">
+      <UniqueIdentifier>{c8424edc-fa68-46a8-90af-71a8e2d59778}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Function\handles">
+      <UniqueIdentifier>{c14cb4f8-c278-486a-81e4-802993a64603}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Function\ZW/NT函数">
+      <UniqueIdentifier>{595e2fa8-95b6-4a50-b0ab-7f0799e9d7bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Function\KernelInject">
+      <UniqueIdentifier>{18cd1522-9ce8-41df-8089-20e07d266439}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Inf Include="anti.inf">
+      <Filter>Driver Files</Filter>
+    </Inf>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Driver.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="peb.c">
+      <Filter>Function\PEB</Filter>
+    </ClCompile>
+    <ClCompile Include="emunProcess.c">
+      <Filter>Function\process</Filter>
+    </ClCompile>
+    <ClCompile Include="emunKernelModule.c">
+      <Filter>Function\driver</Filter>
+    </ClCompile>
+    <ClCompile Include="CommFunction.c">
+      <Filter>Function\常用函数</Filter>
+    </ClCompile>
+    <ClCompile Include="ioctrol.c">
+      <Filter>Function\通信</Filter>
+    </ClCompile>
+    <ClCompile Include="vad.c">
+      <Filter>Function\vad</Filter>
+    </ClCompile>
+    <ClCompile Include="emunMemory.c">
+      <Filter>Function\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="emunHands.c">
+      <Filter>Function\handles</Filter>
+    </ClCompile>
+    <ClCompile Include="zwfun.c">
+      <Filter>Function\ZW/NT函数</Filter>
+    </ClCompile>
+    <ClCompile Include="pe.c">
+      <Filter>Function\ZW/NT函数</Filter>
+    </ClCompile>
+    <ClCompile Include="thread.c">
+      <Filter>Function\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="KernelInject.c">
+      <Filter>Function\KernelInject</Filter>
+    </ClCompile>
+    <ClCompile Include="emunAllKernleCallBack.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="heads.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="peb.h">
+      <Filter>Function\PEB</Filter>
+    </ClInclude>
+    <ClInclude Include="exapi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Object_Type_signed.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="emunProcess.h">
+      <Filter>Function\process</Filter>
+    </ClInclude>
+    <ClInclude Include="emunKernelModule.h">
+      <Filter>Function\driver</Filter>
+    </ClInclude>
+    <ClInclude Include="CommFunction.h">
+      <Filter>Function\常用函数</Filter>
+    </ClInclude>
+    <ClInclude Include="ioctrol.h">
+      <Filter>Function\通信</Filter>
+    </ClInclude>
+    <ClInclude Include="struct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vad.h">
+      <Filter>Function\vad</Filter>
+    </ClInclude>
+    <ClInclude Include="emunMemory.h">
+      <Filter>Function\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="emunHands.h">
+      <Filter>Function\handles</Filter>
+    </ClInclude>
+    <ClInclude Include="zwfun.h">
+      <Filter>Function\ZW/NT函数</Filter>
+    </ClInclude>
+    <ClInclude Include="pe.h">
+      <Filter>Function\ZW/NT函数</Filter>
+    </ClInclude>
+    <ClInclude Include="thread.h">
+      <Filter>Function\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="KernelInject.h">
+      <Filter>Function\KernelInject</Filter>
+    </ClInclude>
+    <ClInclude Include="emunAllKernleCallBack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

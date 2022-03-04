@@ -1,0 +1,1 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.Cpp.InvalidPlatform.Targets(21,7): error MSB8006: 项目“anti.vcxproj”的平台无效。  平台为“ARM64”。如果其他一些项目尝试使用针对此项目的项目到项目引用，但此项目已经卸载或未包括在解决方案中，并且引用项目不是使用相同的或等效的平台进行生成，则也可能出现此错误。
