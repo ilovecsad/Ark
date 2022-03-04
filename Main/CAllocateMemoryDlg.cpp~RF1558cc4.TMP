@@ -1,0 +1,107 @@
+﻿// CAllocateMemoryDlg.cpp: 实现文件
+//
+
+#include "pch.h"
+#include "Main.h"
+#include "CAllocateMemoryDlg.h"
+#include "afxdialogex.h"
+
+
+// CAllocateMemoryDlg 对话框
+
+IMPLEMENT_DYNAMIC(CAllocateMemoryDlg, CDialogEx)
+
+CAllocateMemoryDlg::CAllocateMemoryDlg(CWnd* pParent /*=nullptr*/)
+	: CDialogEx(IDD_DIALOG1, pParent)
+	, m_dwAddress(0)
+	, m_dwSize(0)
+{
+	m_dwPid = 0;
+
+}
+
+CAllocateMemoryDlg::~CAllocateMemoryDlg()
+{
+}
+
+void CAllocateMemoryDlg::DoDataExchange(CDataExchange* pDX)
+{
+	CDialogEx::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_COMBO_TYPE, m_cbType);
+	DDX_Control(pDX, IDC_COMBO_PROTECTION, m_cbProtection);
+	DDX_Text(pDX, IDC_EDIT_ADDRESS, m_dwAddress);
+	DDX_Text(pDX, IDC_EDIT_SIZE, m_dwSize);
+}
+
+
+BEGIN_MESSAGE_MAP(CAllocateMemoryDlg, CDialogEx)
+	ON_BN_CLICKED(IDOK, &CAllocateMemoryDlg::OnBnClickedOk)
+END_MESSAGE_MAP()
+
+
+// CAllocateMemoryDlg 消息处理程序
+
+
+
+
+BOOL CAllocateMemoryDlg::OnInitDialog()
+{
+	CDialogEx::OnInitDialog();
+	
+	m_cbType.ResetContent();
+	m_cbType.InsertString(0, L"MEM_COMMIT");
+	m_cbType.SetItemData(0, MEM_COMMIT);
+
+	m_cbType.InsertString(1, L"MEM_RESERVE");
+	m_cbType.SetItemData(1, MEM_RESERVE);
+	
+
+
+	m_cbProtection.ResetContent();
+	m_cbProtection.InsertString(0, L"PAGE_READONLY");
+	m_cbProtection.SetItemData(0, PAGE_READONLY);
+
+	m_cbProtection.InsertString(1, L"PAGE_READWRITE");
+	m_cbProtection.SetItemData(1, PAGE_READWRITE);
+
+	m_cbProtection.InsertString(2, L"PAGE_WRITECOPY");
+	m_cbProtection.SetItemData(2, PAGE_WRITECOPY);
+
+	m_cbProtection.InsertString(3, L"PAGE_EXECUTE");
+	m_cbProtection.SetItemData(3, PAGE_EXECUTE);
+
+	m_cbProtection.InsertString(4, L"PAGE_EXECUTE_READ");
+	m_cbProtection.SetItemData(4, PAGE_EXECUTE_READ);
+
+	m_cbProtection.InsertString(5, L"PAGE_EXECUTE_READWRITE");
+	m_cbProtection.SetItemData(5, PAGE_EXECUTE_READWRITE);
+
+	m_cbProtection.InsertString(6, L"PAGE_EXECUTE_WRITECOPY");
+	m_cbProtection.SetItemData(6, PAGE_EXECUTE_WRITECOPY);
+
+
+	m_cbType.SetCurSel(0);
+	m_cbProtection.SetCurSel(5);
+
+
+	return FALSE;  // return TRUE unless you set the focus to a control
+				  // 异常: OCX 属性页应返回 FALSE
+}
+
+void CAllocateMemoryDlg::OnBnClickedOk()
+{
+	if (!m_dwPid)return;
+
+	UpdateData();
+	ULONG_PTR a = m_dwAddress;
+	ULONG_PTR b = 0;
+	if (m_dwSize <0x1000)
+	{
+		b = 0x1000;
+	}
+	else {
+		b = m_dwSize;
+	}
+	
+	int aaa = 0;
+}
